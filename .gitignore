@@ -1,3 +1,6 @@
 node_modules/
+apps/electron/node_modules/
+apps/terminal/node_modules/
 .pytest_cache/
 __pycache__/
+.ruff_cache/
