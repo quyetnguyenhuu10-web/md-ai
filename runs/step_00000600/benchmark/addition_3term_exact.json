@@ -1,0 +1,167 @@
+{
+  "benchmark": {
+    "checkpoint": "runs/step_00000600",
+    "step": 600,
+    "seed": 0,
+    "preset": "dense_5m",
+    "vocab": "data_store/tokenizers/addition_3term_byte_bpe_512/tokenizer.json",
+    "correct": 765,
+    "total": 780,
+    "wrong_count": 15,
+    "accuracy": 0.9807692307692307,
+    "elapsed_sec": 9.536425799999051,
+    "examples_per_sec": 81.79164986530672,
+    "fixed_seq_len": null,
+    "stop_at_target_length": true,
+    "template": {
+      "sequence": [
+        "{prompt}\n{answer}<eos>"
+      ],
+      "input_until": {
+        "field": "answer"
+      },
+      "target": {
+        "field": "answer"
+      }
+    },
+    "wrong_limit": 20,
+    "wrong_count_sampled": 15,
+    "first_wrong": [
+      {
+        "prompt": "6+6+7?",
+        "answer": "6+6+7=12+7=19",
+        "predict": "6+6+7=13+7=20",
+        "norm": {
+          "answer": "6+6+7=12+7=19",
+          "predict": "6+6+7=13+7=20"
+        }
+      },
+      {
+        "prompt": "9+9+0?",
+        "answer": "9+9+0=18+0=18",
+        "predict": "9+9+0=9+0=9",
+        "norm": {
+          "answer": "9+9+0=18+0=18",
+          "predict": "9+9+0=9+0=9"
+        }
+      },
+      {
+        "prompt": "7+7+9?",
+        "answer": "7+7+9=14+9=23",
+        "predict": "7+7+9=14+9=21",
+        "norm": {
+          "answer": "7+7+9=14+9=23",
+          "predict": "7+7+9=14+9=21"
+        }
+      },
+      {
+        "prompt": "1+1+0?",
+        "answer": "1+1+0=2+0=2",
+        "predict": "1+1+0=2+0=1",
+        "norm": {
+          "answer": "1+1+0=2+0=2",
+          "predict": "1+1+0=2+0=1"
+        }
+      },
+      {
+        "prompt": "6+6+9?",
+        "answer": "6+6+9=12+9=21",
+        "predict": "6+6+9=15+9=24",
+        "norm": {
+          "answer": "6+6+9=12+9=21",
+          "predict": "6+6+9=15+9=24"
+        }
+      },
+      {
+        "prompt": "7+7+8?",
+        "answer": "7+7+8=14+8=22",
+        "predict": "7+7+8=14+8=21",
+        "norm": {
+          "answer": "7+7+8=14+8=22",
+          "predict": "7+7+8=14+8=21"
+        }
+      },
+      {
+        "prompt": "6+6+5?",
+        "answer": "6+6+5=12+5=17",
+        "predict": "6+6+5=11+5=16",
+        "norm": {
+          "answer": "6+6+5=12+5=17",
+          "predict": "6+6+5=11+5=16"
+        }
+      },
+      {
+        "prompt": "2+2+9?",
+        "answer": "2+2+9=4+9=13",
+        "predict": "2+2+9=11+9=20",
+        "norm": {
+          "answer": "2+2+9=4+9=13",
+          "predict": "2+2+9=11+9=20"
+        }
+      },
+      {
+        "prompt": "0+0+4?",
+        "answer": "0+0+4=0+4=4",
+        "predict": "0+0+4=0+4=6",
+        "norm": {
+          "answer": "0+0+4=0+4=4",
+          "predict": "0+0+4=0+4=6"
+        }
+      },
+      {
+        "prompt": "2+2+8?",
+        "answer": "2+2+8=4+8=12",
+        "predict": "2+2+8=10+8=18",
+        "norm": {
+          "answer": "2+2+8=4+8=12",
+          "predict": "2+2+8=10+8=18"
+        }
+      },
+      {
+        "prompt": "6+8+9?",
+        "answer": "6+8+9=14+9=23",
+        "predict": "6+8+9=15+9=24",
+        "norm": {
+          "answer": "6+8+9=14+9=23",
+          "predict": "6+8+9=15+9=24"
+        }
+      },
+      {
+        "prompt": "2+2+5?",
+        "answer": "2+2+5=4+5=9",
+        "predict": "2+2+5=7+5=12",
+        "norm": {
+          "answer": "2+2+5=4+5=9",
+          "predict": "2+2+5=7+5=12"
+        }
+      },
+      {
+        "prompt": "2+2+7?",
+        "answer": "2+2+7=4+7=11",
+        "predict": "2+2+7=9+7=16",
+        "norm": {
+          "answer": "2+2+7=4+7=11",
+          "predict": "2+2+7=9+7=16"
+        }
+      },
+      {
+        "prompt": "0+0+1?",
+        "answer": "0+0+1=0+1=1",
+        "predict": "0+0+1=0+1=6",
+        "norm": {
+          "answer": "0+0+1=0+1=1",
+          "predict": "0+0+1=0+1=6"
+        }
+      },
+      {
+        "prompt": "2+2+3?",
+        "answer": "2+2+3=4+3=7",
+        "predict": "2+2+3=5+3=8",
+        "norm": {
+          "answer": "2+2+3=4+3=7",
+          "predict": "2+2+3=5+3=8"
+        }
+      }
+    ]
+  }
+}

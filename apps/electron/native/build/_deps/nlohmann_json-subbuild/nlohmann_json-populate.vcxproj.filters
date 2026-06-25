@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\mintdim__lab\apps\electron\native\build\_deps\nlohmann_json-subbuild\CMakeFiles\b7b883bf4ca78814ebb3e2f13fb12f41\nlohmann_json-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\mintdim__lab\apps\electron\native\build\_deps\nlohmann_json-subbuild\CMakeFiles\b7b883bf4ca78814ebb3e2f13fb12f41\nlohmann_json-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\mintdim__lab\apps\electron\native\build\_deps\nlohmann_json-subbuild\CMakeFiles\b7b883bf4ca78814ebb3e2f13fb12f41\nlohmann_json-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\mintdim__lab\apps\electron\native\build\_deps\nlohmann_json-subbuild\CMakeFiles\b7b883bf4ca78814ebb3e2f13fb12f41\nlohmann_json-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\mintdim__lab\apps\electron\native\build\_deps\nlohmann_json-subbuild\CMakeFiles\b7b883bf4ca78814ebb3e2f13fb12f41\nlohmann_json-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\mintdim__lab\apps\electron\native\build\_deps\nlohmann_json-subbuild\CMakeFiles\b7b883bf4ca78814ebb3e2f13fb12f41\nlohmann_json-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\mintdim__lab\apps\electron\native\build\_deps\nlohmann_json-subbuild\CMakeFiles\b7b883bf4ca78814ebb3e2f13fb12f41\nlohmann_json-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\mintdim__lab\apps\electron\native\build\_deps\nlohmann_json-subbuild\CMakeFiles\b7b883bf4ca78814ebb3e2f13fb12f41\nlohmann_json-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\mintdim__lab\apps\electron\native\build\_deps\nlohmann_json-subbuild\CMakeFiles\cd2c087c7993aa2040b96ac2e1f1c969\nlohmann_json-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\mintdim__lab\apps\electron\native\build\_deps\nlohmann_json-subbuild\CMakeFiles\4ce4a2268c927fe59df885f93390a523\nlohmann_json-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\mintdim__lab\apps\electron\native\build\_deps\nlohmann_json-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\mintdim__lab\apps\electron\native\build\_deps\nlohmann_json-subbuild\CMakeFiles\nlohmann_json-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{C511D680-A88D-36EF-9CC1-04A148350E64}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

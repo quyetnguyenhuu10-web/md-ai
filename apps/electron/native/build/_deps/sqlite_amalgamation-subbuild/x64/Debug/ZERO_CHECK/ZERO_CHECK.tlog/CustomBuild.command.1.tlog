@@ -1,0 +1,10 @@
+^D:\MINTDIM__LAB\APPS\ELECTRON\NATIVE\BUILD\_DEPS\SQLITE_AMALGAMATION-SUBBUILD\CMAKEFILES\F90C5AAD43685A27BB59EDB01D91C0AF\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/mintdim__lab/apps/electron/native/build/_deps/sqlite_amalgamation-subbuild -BD:/mintdim__lab/apps/electron/native/build/_deps/sqlite_amalgamation-subbuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/mintdim__lab/apps/electron/native/build/_deps/sqlite_amalgamation-subbuild/sqlite_amalgamation-populate.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

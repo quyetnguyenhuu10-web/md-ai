@@ -1,0 +1,31 @@
+# Public MintDim unit-build config for the addition_3term corpus.
+
+source:
+  jsonl:
+    files:
+      - ./data_store/raw/addition_3term/train.jsonl
+    fields:
+      - [prompt, answer]
+    templates:
+      - "{prompt}\n{answer}<eos>"
+
+tokenizer:
+  hf_json:
+    files:
+      - ./data_store/tokenizers/addition_3term_byte_bpe_512/tokenizer.json
+
+units:
+  sizes:
+    - [19]
+  build_batch:
+    - 64
+
+output:
+  dir:
+    path: ./data_store/packed/addition_3term_unit19
+    samples_per_shard:
+      - 500
+
+run:
+  on_template_unk: abort
+  on_overflow: abort

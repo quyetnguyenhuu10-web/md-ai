@@ -1,0 +1,8 @@
+# Tokenizer/vocab metadata for the addition_3term dataset.
+#
+# Built separately from data_store/raw/addition_3term/train.jsonl.
+# The requested target vocab size was 512; the tiny arithmetic corpus produced
+# fewer actual tokens because the byte alphabet already covers all characters.
+
+type: hf_json
+path: ./data_store/tokenizers/addition_3term_byte_bpe_512/tokenizer.json

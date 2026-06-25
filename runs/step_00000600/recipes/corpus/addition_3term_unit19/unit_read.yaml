@@ -1,0 +1,25 @@
+# Public MintDim unit-read config for the packed addition_3term corpus.
+#
+# unit_read is tokenizer-free. The .bin records already contain token ids.
+
+queue:
+  - path: ./data_store/packed/addition_3term_unit19/unit_19
+    unit: 19
+    batch: 50
+    accum: 10
+
+layout:
+  sequence_template:
+    - prompt
+    - token_template
+    - answer
+    - token_template
+
+target:
+  fields:
+    - answer
+    - token_template
+  index:
+    - 2
+    - 3
+  ignore_id: -100

@@ -1,0 +1,11 @@
+checkpoint_1:
+  checkpoint:
+    - runs/train/linear_equation_tiny_cpu/checkpoints/step_00000700
+  vocab:
+    - data_store/tokenizers/byte_bpe_512/tokenizer.json
+
+checkpoint_2:
+  checkpoint:
+    - null
+  vocab:
+    - null

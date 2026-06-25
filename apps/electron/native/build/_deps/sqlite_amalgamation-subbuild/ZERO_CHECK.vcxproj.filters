@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\mintdim__lab\apps\electron\native\build\_deps\sqlite_amalgamation-subbuild\CMakeFiles\f90c5aad43685a27bb59edb01d91c0af\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{6B350B02-69F2-38DD-8BCE-B69DBB6A62C6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

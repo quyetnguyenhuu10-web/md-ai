@@ -1,0 +1,2 @@
+add_executable(chat_core_sidecar main.cpp)
+target_link_libraries(chat_core_sidecar PRIVATE chat_core)

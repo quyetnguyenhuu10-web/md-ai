@@ -1,0 +1,89 @@
+source_roots:
+  - src
+
+ignored_dirs:
+  - node_modules
+  - out
+  - dist
+  - build
+  - native/build
+  - data
+  - coverage
+
+layers:
+  electron_main:
+    patterns:
+      - "src/main/**"
+    allowed_imports:
+      - stdlib
+      - external
+      - electron_main
+      - electron_contracts
+    forbidden_imports:
+      - electron_renderer
+      - electron_preload
+
+  electron_preload:
+    patterns:
+      - "src/preload/**"
+    allowed_imports:
+      - stdlib
+      - external
+      - electron_preload
+      - electron_contracts
+    forbidden_imports:
+      - electron_main
+      - electron_renderer
+
+  electron_renderer:
+    patterns:
+      - "src/renderer/**"
+    allowed_imports:
+      - stdlib
+      - external
+      - electron_renderer
+      - electron_contracts
+    forbidden_imports:
+      - electron_main
+      - electron_preload
+      - electron
+      - node:*
+
+  electron_contracts:
+    patterns:
+      - "src/contracts/**"
+    allowed_imports:
+      - stdlib
+      - external
+      - electron_contracts
+    forbidden_imports:
+      - electron_main
+      - electron_preload
+      - electron_renderer
+      - electron
+
+allowed_imports: []
+forbidden_imports: []
+
+composition_roots:
+  - "src/main/**"
+  - "src/preload/**"
+
+runtime_wiring_imports:
+  - electron
+  - node:fs
+  - node:child_process
+  - fs
+
+public_api_contracts: []
+
+baseline:
+  file: tests/contracts/electron_contract_baseline.yaml
+  mode: allow_known
+
+rules:
+  forbid_import_cycles: true
+  forbid_private_cross_imports: true
+  forbid_relative_parent_imports: true
+  forbid_runtime_wiring_outside_composition_root: true
+  strict_public_api: false

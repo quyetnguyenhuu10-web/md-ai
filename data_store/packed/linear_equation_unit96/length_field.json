@@ -1,0 +1,39 @@
+{
+  "magic": 65535,
+  "sequence_template": [
+    "prompt",
+    "token_template",
+    "target",
+    "token_template"
+  ],
+  "length_fields": [
+    {
+      "index": 0,
+      "name": "prompt",
+      "kind": "field",
+      "content": null,
+      "field": "prompt"
+    },
+    {
+      "index": 1,
+      "name": "token_template",
+      "kind": "literal",
+      "content": "\n"
+    },
+    {
+      "index": 2,
+      "name": "target",
+      "kind": "field",
+      "content": null,
+      "field": "target"
+    },
+    {
+      "index": 3,
+      "name": "token_template",
+      "kind": "literal",
+      "content": "<eos>"
+    }
+  ],
+  "token_dtype": "uint16",
+  "pad_token_id": 0
+}

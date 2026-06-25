@@ -1,0 +1,13 @@
+{
+  "total_samples": 1500,
+  "total_tokens": 92207,
+  "token_dtype": "uint16",
+  "bytes_per_token": 2,
+  "duplicate_groups": 0,
+  "duplicate_samples": 0,
+  "samples_with_unk": 0,
+  "unk_tokens": 0,
+  "unit_distribution": {
+    "96": 1500
+  }
+}

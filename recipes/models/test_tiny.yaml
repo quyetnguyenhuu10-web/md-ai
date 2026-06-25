@@ -1,0 +1,46 @@
+model:
+  max_sequence_length: 128
+  num_layers: 2
+  hidden_size: 32
+  intermediate_size: 64
+  activation: swiglu
+  tie_word_embeddings: true
+
+attention:
+  num_attention_heads: 4
+  value_head_dim: 8
+  layer_types:
+    - local_sliding
+    - global
+  local_sliding:
+    window_size: 16
+    num_key_value_heads: 2
+    qk_head_dim: 8
+    qk_logits_softcap: 7
+    rope:
+      dim: 4
+      theta: 10000
+      scale: 1.0
+  global:
+    num_key_value_heads: 4
+    qk_head_dim: 8
+    qk_logits_softcap: 11
+    rope:
+      dim: 2
+      theta: 100000
+      scale: 1.0
+
+normalization:
+  post_attention: false
+  post_ffn: false
+  qk_norm:
+    enabled: false
+    learnable_scale: false
+
+output:
+  vocab_logits_softcap: null
+
+runtime:
+  gradient_checkpointing: false
+  flash_attention: false
+  fused_attention: false

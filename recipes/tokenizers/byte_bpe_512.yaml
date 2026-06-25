@@ -1,0 +1,6 @@
+# Tokenizer/vocab metadata for training setup.
+#
+# unit_read does not use this file because .bin records already contain token ids.
+
+type: hf_json
+path: ./data_store/tokenizers/byte_bpe_512/tokenizer.json

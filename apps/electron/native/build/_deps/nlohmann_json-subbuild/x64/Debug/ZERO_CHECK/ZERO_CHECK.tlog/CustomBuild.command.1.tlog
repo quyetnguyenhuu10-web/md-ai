@@ -1,0 +1,10 @@
+^D:\MINTDIM__LAB\APPS\ELECTRON\NATIVE\BUILD\_DEPS\NLOHMANN_JSON-SUBBUILD\CMAKEFILES\4CE4A2268C927FE59DF885F93390A523\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/mintdim__lab/apps/electron/native/build/_deps/nlohmann_json-subbuild -BD:/mintdim__lab/apps/electron/native/build/_deps/nlohmann_json-subbuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/mintdim__lab/apps/electron/native/build/_deps/nlohmann_json-subbuild/nlohmann_json-populate.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

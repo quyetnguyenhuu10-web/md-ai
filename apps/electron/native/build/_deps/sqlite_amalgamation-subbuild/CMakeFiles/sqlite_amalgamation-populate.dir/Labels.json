@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "D:/mintdim__lab/apps/electron/native/build/_deps/sqlite_amalgamation-subbuild/CMakeFiles/sqlite_amalgamation-populate"
+		},
+		{
+			"file" : "D:/mintdim__lab/apps/electron/native/build/_deps/sqlite_amalgamation-subbuild/CMakeFiles/f90c5aad43685a27bb59edb01d91c0af/sqlite_amalgamation-populate.rule"
+		},
+		{
+			"file" : "D:/mintdim__lab/apps/electron/native/build/_deps/sqlite_amalgamation-subbuild/CMakeFiles/a4c094a0b0f69ccbb90a3a227fedd457/sqlite_amalgamation-populate-complete.rule"
+		},
+		{
+			"file" : "D:/mintdim__lab/apps/electron/native/build/_deps/sqlite_amalgamation-subbuild/CMakeFiles/697a7a73c42c9c90c782040cdf9afd76/sqlite_amalgamation-populate-build.rule"
+		},
+		{
+			"file" : "D:/mintdim__lab/apps/electron/native/build/_deps/sqlite_amalgamation-subbuild/CMakeFiles/697a7a73c42c9c90c782040cdf9afd76/sqlite_amalgamation-populate-configure.rule"
+		},
+		{
+			"file" : "D:/mintdim__lab/apps/electron/native/build/_deps/sqlite_amalgamation-subbuild/CMakeFiles/697a7a73c42c9c90c782040cdf9afd76/sqlite_amalgamation-populate-download.rule"
+		},
+		{
+			"file" : "D:/mintdim__lab/apps/electron/native/build/_deps/sqlite_amalgamation-subbuild/CMakeFiles/697a7a73c42c9c90c782040cdf9afd76/sqlite_amalgamation-populate-install.rule"
+		},
+		{
+			"file" : "D:/mintdim__lab/apps/electron/native/build/_deps/sqlite_amalgamation-subbuild/CMakeFiles/697a7a73c42c9c90c782040cdf9afd76/sqlite_amalgamation-populate-mkdir.rule"
+		},
+		{
+			"file" : "D:/mintdim__lab/apps/electron/native/build/_deps/sqlite_amalgamation-subbuild/CMakeFiles/697a7a73c42c9c90c782040cdf9afd76/sqlite_amalgamation-populate-patch.rule"
+		},
+		{
+			"file" : "D:/mintdim__lab/apps/electron/native/build/_deps/sqlite_amalgamation-subbuild/CMakeFiles/697a7a73c42c9c90c782040cdf9afd76/sqlite_amalgamation-populate-test.rule"
+		},
+		{
+			"file" : "D:/mintdim__lab/apps/electron/native/build/_deps/sqlite_amalgamation-subbuild/CMakeFiles/697a7a73c42c9c90c782040cdf9afd76/sqlite_amalgamation-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"sqlite_amalgamation-populate"
+		],
+		"name" : "sqlite_amalgamation-populate"
+	}
+}

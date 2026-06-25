@@ -1,0 +1,48 @@
+{
+  "name": "highperf-chat-ui",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "out/main/index.js",
+  "scripts": {
+    "dev": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/ensure-native.ps1 && electron-vite dev",
+    "build": "npm run build:native && tsc --noEmit && electron-vite build",
+    "build:native": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-native.ps1",
+    "start": "electron-vite preview",
+    "test:chat-store": "node tests/renderer/chatStore.test.mjs",
+    "test:chat-streaming": "node tests/main/chatServiceStreaming.test.mjs",
+    "test:prepend-scroll-anchor": "node tests/renderer/prependScrollAnchor.test.mjs",
+    "test:contracts": "node tests/contracts/run-electron-contracts.mjs",
+    "test:render-cache-disk": "node tests/main/renderCacheDiskService.test.mjs",
+    "test:render-cache": "node tests/renderer/renderCache.test.mjs",
+    "test:stream-live-markdown": "node tests/renderer/streamingLiveMarkdown.test.mjs",
+    "test:stream-window": "node tests/renderer/streamingMarkdownWindow.test.mjs",
+    "test:stream-rendering": "node tests/renderer/streamingMarkdownBlocks.test.mjs",
+    "test:streaming": "node tests/renderer/streamSegments.test.mjs"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.0.0",
+    "katex": "^0.17.0",
+    "lucide-react": "^0.468.0",
+    "monaco-editor": "^0.55.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-markdown": "^10.1.0",
+    "rehype-katex": "^7.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-math": "^6.0.0",
+    "shiki": "^4.0.2",
+    "zustand": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@typescript-eslint/typescript-estree": "^8.62.0",
+    "electron": "^39.8.10",
+    "electron-vite": "^3.0.0",
+    "js-yaml": "^5.1.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5"
+  }
+}

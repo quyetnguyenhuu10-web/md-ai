@@ -1,0 +1,10 @@
+^D:\MINTDIM__LAB\APPS\ELECTRON\NATIVE\SIDECAR\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/mintdim__lab/apps/electron/native -BD:/mintdim__lab/apps/electron/native/build --check-stamp-file D:/mintdim__lab/apps/electron/native/build/sidecar/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

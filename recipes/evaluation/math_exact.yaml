@@ -1,0 +1,33 @@
+checkpoint:
+  # Must point to a concrete checkpoint file or one Orbax step_* directory.
+  # Do not use the root directory runs/checkpoints here.
+  path: experiments/step_00000600
+
+vocab:
+  path: data_store/tokenizers/byte_bpe_512/tokenizer.json
+
+data:
+  eval_path: data_store/raw/linear_equation/eval.jsonl
+
+template:
+  sequence:
+    - "{prompt}\n{target}<eos>"
+  input_until:
+    field: target
+  target:
+    field: target
+
+runtime:
+  batch_size: 64
+  max_new_tokens: 96
+  fixed_seq_len: null
+  limit: 1000
+  stop_at_target_length: true
+
+scoring:
+  ignore_whitespace: false
+  normalize_line_endings: false
+  case_insensitive: false
+
+output:
+  wrong_limit: 20

@@ -1,0 +1,6 @@
+D:/mintdim__lab/apps/electron/native/build/CMakeFiles/sqlite3.dir
+D:/mintdim__lab/apps/electron/native/build/CMakeFiles/ALL_BUILD.dir
+D:/mintdim__lab/apps/electron/native/build/CMakeFiles/ZERO_CHECK.dir
+D:/mintdim__lab/apps/electron/native/build/_deps/nlohmann_json-build/CMakeFiles/ALL_BUILD.dir
+D:/mintdim__lab/apps/electron/native/build/chat_core/CMakeFiles/chat_core.dir
+D:/mintdim__lab/apps/electron/native/build/sidecar/CMakeFiles/chat_core_sidecar.dir

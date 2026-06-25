@@ -1,0 +1,46 @@
+{
+  "pipeline": "unit-build",
+  "mintdim_version": "0.2.1",
+  "tokenizer": {
+    "type": "hf_json",
+    "path": "./data_store/tokenizers/addition_3term_byte_bpe_512/tokenizer.json",
+    "vocab_size": 282,
+    "unk_id": 2,
+    "pad_id": 0
+  },
+  "token_storage": {
+    "dtype": "uint16",
+    "bytes_per_token": 2,
+    "magic": 65535
+  },
+  "sequence_template": [
+    "prompt",
+    "token_template",
+    "answer",
+    "token_template"
+  ],
+  "length_field_metadata": "length_field.json",
+  "units": {
+    "sizes": [
+      19
+    ],
+    "build_batch": 64
+  },
+  "source": {
+    "files": [
+      "./data_store/raw/addition_3term/train.jsonl"
+    ],
+    "fields": [
+      [
+        "prompt",
+        "answer"
+      ]
+    ],
+    "templates": [
+      "{prompt}\n{answer}<eos>"
+    ]
+  },
+  "output": {
+    "samples_per_shard": 500
+  }
+}

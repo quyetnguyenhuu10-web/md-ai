@@ -1,0 +1,37 @@
+{
+  "dataset": "addition_3term",
+  "seed": 0,
+  "template": "{prompt}\n{answer}<eos>",
+  "splits": {
+    "train": {
+      "path": "data_store/raw/addition_3term/train.jsonl",
+      "total": 500,
+      "counts": {
+        "a+b": 100,
+        "ab+c": 90,
+        "c+ab": 90,
+        "a+b+c": 220
+      }
+    },
+    "eval": {
+      "path": "data_store/raw/addition_3term/eval.jsonl",
+      "total": 780,
+      "counts": {
+        "a+b+c": 780
+      }
+    }
+  },
+  "rules": {
+    "two_term_prompt": "x+y=?",
+    "two_term_answer": "x+y=sum",
+    "three_term_prompt": "a+b+c?",
+    "three_term_answer": "step-by-step: a+b+c=(a+b)+c=sum",
+    "ab_range": [
+      10,
+      18
+    ],
+    "three_term_universe": 1000,
+    "three_term_train": 220,
+    "three_term_eval": 780
+  }
+}

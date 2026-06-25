@@ -1,0 +1,260 @@
+{
+  "array_storage": "host_numpy",
+  "attention_pattern": [
+    "local_sliding",
+    "global",
+    "local_sliding",
+    "global"
+  ],
+  "config_hashes": {
+    "model_config": "2bf5bd63d4e47f501097849f108d512419157a1025e96272f75bc5d72e8b4364",
+    "tokenizer_config": "c731a011846b55ef4e299546944168df2ba9ac3c020e7eef0c6e4a2f2c59e1ab",
+    "training_config": "5ddc7f22cfdf603f030e69811dfa1f77c0d2ba44e43198c7c82f9af28df0af2b",
+    "unit_read_config": "30ca6f62ad2a36096d295a74789c793d37ad76e7e202521b7dbbafefd732facd"
+  },
+  "config_paths": {
+    "checkpoint_dir": "/content/drive/MyDrive/mintdim__lab_gpu_seed_runs/seed_00/checkpoints",
+    "model_config": "recipes/models/tiny.yaml",
+    "tokenizer_config": "recipes/tokenizers/addition_3term_byte_bpe_512.yaml",
+    "training_config": "recipes/train/gpu/addition_3term_tiny_gpu.yaml",
+    "unit_read_config": "recipes/corpus/addition_3term_unit19/unit_read.yaml"
+  },
+  "configs": {
+    "model": {
+      "attention": {
+        "global": {
+          "num_key_value_heads": 4,
+          "qk_head_dim": 32,
+          "qk_logits_softcap": 50,
+          "rope": {
+            "dim": 12,
+            "scale": 1.5,
+            "theta": 100000
+          }
+        },
+        "layer_types": [
+          "local_sliding",
+          "global"
+        ],
+        "local_sliding": {
+          "num_key_value_heads": 2,
+          "qk_head_dim": 32,
+          "qk_logits_softcap": 50,
+          "rope": {
+            "dim": 24,
+            "scale": 1.0,
+            "theta": 10000
+          },
+          "window_size": 10
+        },
+        "num_attention_heads": 4,
+        "value_head_dim": 32
+      },
+      "model": {
+        "activation": "swiglu",
+        "hidden_size": 128,
+        "intermediate_size": 448,
+        "max_sequence_length": 5096,
+        "num_layers": 4,
+        "tie_word_embeddings": true
+      },
+      "normalization": {
+        "post_attention": true,
+        "post_ffn": true,
+        "qk_norm": {
+          "enabled": true,
+          "learnable_scale": true
+        }
+      },
+      "output": {
+        "vocab_logits_softcap": null
+      },
+      "runtime": {
+        "flash_attention": true,
+        "fused_attention": false,
+        "gradient_checkpointing": true
+      }
+    },
+    "tokenizer": {
+      "path": "./data_store/tokenizers/addition_3term_byte_bpe_512/tokenizer.json",
+      "type": "hf_json"
+    },
+    "training": {
+      "checkpoint_dir": "runs/train/addition_3term_tiny_gpu/checkpoints",
+      "checkpoint_max_to_keep": 15,
+      "log_every": 10,
+      "max_steps": 600,
+      "model_config": "recipes/models/tiny.yaml",
+      "optimization": {
+        "adam_eps": 1e-08,
+        "beta1": 0.9,
+        "beta2": 0.95,
+        "clip_grad_norm": 1.0,
+        "decay_start_step": 600,
+        "learning_rate": 0.003,
+        "min_lr_ratio": 0.1,
+        "warmup_steps": 90,
+        "weight_decay": 0.0
+      },
+      "runtime": {
+        "compile_update": true,
+        "device_index": 0,
+        "global_device": false,
+        "name": "gpu"
+      },
+      "save_every": 100,
+      "seed": 0,
+      "tokenizer_config": "recipes/tokenizers/addition_3term_byte_bpe_512.yaml",
+      "unit_read_config": "recipes/corpus/addition_3term_unit19/unit_read.yaml"
+    },
+    "unit_read": {
+      "layout": {
+        "sequence_template": [
+          "prompt",
+          "token_template",
+          "answer",
+          "token_template"
+        ]
+      },
+      "queue": [
+        {
+          "accum": 10,
+          "batch": 50,
+          "path": "./data_store/packed/addition_3term_unit19/unit_19",
+          "unit": 19
+        }
+      ],
+      "target": {
+        "fields": [
+          "answer",
+          "token_template"
+        ],
+        "ignore_id": -100,
+        "index": [
+          2,
+          3
+        ]
+      }
+    }
+  },
+  "debug": {
+    "determinism": {
+      "enabled": true,
+      "log_path": "/content/drive/MyDrive/mintdim__lab_gpu_seed_runs/seed_00/determinism.jsonl",
+      "opt_state_sha256": "583fb8625cfd5e443040baf7d88e92d62f57b6f55dc783e67e75caa434e68c02",
+      "params_sha256": "79042f9d3c68b136fe704e996a4f898fc6a3adb81187dc7f59d22381073a5b25",
+      "step": 600
+    }
+  },
+  "dense_hidden_dim": 448,
+  "embed_dim": 128,
+  "eos_id": 1,
+  "ffw_activation": "swiglu",
+  "final_logit_softcap": null,
+  "format": "mintdim_lab.train_state.orbax.v1",
+  "global_qk_dim": 32,
+  "global_qk_logits_softcap": 50.0,
+  "global_rope_base": 100000,
+  "global_rope_dim": 12,
+  "global_rope_scale": 1.5,
+  "local_qk_dim": 32,
+  "local_qk_logits_softcap": 50.0,
+  "local_rope_base": 10000,
+  "local_rope_dim": 24,
+  "local_rope_scale": 1.0,
+  "logits_head": "tied",
+  "max_seq_len": 5096,
+  "metadata_version": 1,
+  "model_config_metadata_fields": [
+    "num_embed",
+    "max_seq_len",
+    "num_layers",
+    "embed_dim",
+    "dense_hidden_dim",
+    "ffw_activation",
+    "num_heads",
+    "num_local_kv_heads",
+    "num_global_kv_heads",
+    "v_head_dim",
+    "attention_pattern",
+    "sliding_window_size",
+    "final_logit_softcap",
+    "local_qk_logits_softcap",
+    "global_qk_logits_softcap",
+    "use_post_attn_norm",
+    "use_post_ffw_norm",
+    "qk_norm_enabled",
+    "qk_norm_with_scale",
+    "local_qk_dim",
+    "global_qk_dim",
+    "local_rope_dim",
+    "global_rope_dim",
+    "local_rope_base",
+    "global_rope_base",
+    "local_rope_scale",
+    "global_rope_scale",
+    "logits_head",
+    "use_gradient_checkpointing",
+    "use_fused_attention",
+    "use_flash_attention"
+  ],
+  "num_embed": 282,
+  "num_global_kv_heads": 4,
+  "num_heads": 4,
+  "num_layers": 4,
+  "num_local_kv_heads": 2,
+  "pad_id": 0,
+  "qk_norm_enabled": true,
+  "qk_norm_with_scale": true,
+  "runtime": {
+    "compile_update": true,
+    "device_index": 0,
+    "global_device": false,
+    "name": "gpu"
+  },
+  "runtime_topology_dependent": false,
+  "sliding_window_size": 10,
+  "step": 600,
+  "tokenizer_path": "./data_store/tokenizers/addition_3term_byte_bpe_512/tokenizer.json",
+  "tokenizer_type": "hf_json",
+  "training_run": {
+    "checkpoint_max_to_keep": 15,
+    "max_steps": 600,
+    "save_every": 100,
+    "seed": 0
+  },
+  "unit_read": {
+    "entries": [
+      {
+        "accum": 10,
+        "batch": 50,
+        "path": "./data_store/packed/addition_3term_unit19/unit_19",
+        "unit": 19
+      }
+    ],
+    "ignore_id": -100,
+    "sequence_template": [
+      "prompt",
+      "token_template",
+      "answer",
+      "token_template"
+    ],
+    "target_fields": [
+      "answer",
+      "token_template"
+    ],
+    "target_index": [
+      2,
+      3
+    ]
+  },
+  "unk_id": 2,
+  "use_flash_attention": true,
+  "use_fused_attention": false,
+  "use_gradient_checkpointing": true,
+  "use_post_attn_norm": true,
+  "use_post_ffw_norm": true,
+  "v_head_dim": 32,
+  "vocab_path": "./data_store/tokenizers/addition_3term_byte_bpe_512/tokenizer.json",
+  "vocab_size": 282
+}

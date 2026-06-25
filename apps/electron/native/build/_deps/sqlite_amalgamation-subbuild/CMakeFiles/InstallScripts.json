@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"D:/mintdim__lab/apps/electron/native/build/_deps/sqlite_amalgamation-subbuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

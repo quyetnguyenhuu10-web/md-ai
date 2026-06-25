@@ -1,0 +1,65 @@
+[project]
+name = "mintdim-lab"
+version = "0.1.0"
+description = "Local MintDim lab for text model, JAX runtime adapters, and training orchestration."
+readme = { text = "Local MintDim lab for text model, JAX runtime adapters, and training orchestration.", content-type = "text/plain" }
+license = { file = "LICENSE" }
+requires-python = ">=3.12"
+dependencies = [
+    "jax",
+    "flax",
+    "optax",
+    "orbax-checkpoint",
+    "PyYAML",
+    "mintdim>=0.1.22",
+]
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+serve = [
+    "fastapi",
+    "pydantic",
+    "uvicorn",
+]
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["mintdim_lab*"]
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
+pythonpath = [
+    ".",
+    "src",
+]
+python_files = [
+    "test_*.py",
+]
+python_functions = [
+    "test_*",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "UP",
+]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"

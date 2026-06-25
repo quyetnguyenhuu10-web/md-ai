@@ -1,0 +1,27 @@
+model_config: recipes/models/tiny.yaml
+tokenizer_config: recipes/tokenizers/addition_3term_byte_bpe_512.yaml
+unit_read_config: recipes/corpus/addition_3term_unit19/unit_read.yaml
+checkpoint_dir: runs/train/addition_3term_tiny_tpu/checkpoints
+checkpoint_max_to_keep: 15
+
+runtime:
+  name: tpu
+  device_index: 0
+  global_device: false
+  compile_update: true
+
+max_steps: 600
+seed: 0
+log_every: 10
+save_every: 100
+
+optimization:
+  learning_rate: 0.003
+  warmup_steps: 90
+  decay_start_step: 600
+  weight_decay: 0.0
+  beta1: 0.9
+  beta2: 0.95
+  adam_eps: 0.00000001
+  clip_grad_norm: 1.0
+  min_lr_ratio: 0.1

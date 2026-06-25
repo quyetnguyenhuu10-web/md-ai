@@ -1,0 +1,4 @@
+export const LOAD_CHUNK_SIZE = 100;
+export const WINDOW_TARGET_MESSAGES = 300;
+export const WINDOW_MAX_MESSAGES = 600;
+export const WINDOW_OVERSCAN_MESSAGES = 20;

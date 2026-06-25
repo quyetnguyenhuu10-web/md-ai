@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\mintdim__lab\apps\electron\native\build\_deps\sqlite_amalgamation-subbuild\CMakeFiles\697a7a73c42c9c90c782040cdf9afd76\sqlite_amalgamation-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\mintdim__lab\apps\electron\native\build\_deps\sqlite_amalgamation-subbuild\CMakeFiles\697a7a73c42c9c90c782040cdf9afd76\sqlite_amalgamation-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\mintdim__lab\apps\electron\native\build\_deps\sqlite_amalgamation-subbuild\CMakeFiles\697a7a73c42c9c90c782040cdf9afd76\sqlite_amalgamation-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\mintdim__lab\apps\electron\native\build\_deps\sqlite_amalgamation-subbuild\CMakeFiles\697a7a73c42c9c90c782040cdf9afd76\sqlite_amalgamation-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\mintdim__lab\apps\electron\native\build\_deps\sqlite_amalgamation-subbuild\CMakeFiles\697a7a73c42c9c90c782040cdf9afd76\sqlite_amalgamation-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\mintdim__lab\apps\electron\native\build\_deps\sqlite_amalgamation-subbuild\CMakeFiles\697a7a73c42c9c90c782040cdf9afd76\sqlite_amalgamation-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\mintdim__lab\apps\electron\native\build\_deps\sqlite_amalgamation-subbuild\CMakeFiles\697a7a73c42c9c90c782040cdf9afd76\sqlite_amalgamation-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\mintdim__lab\apps\electron\native\build\_deps\sqlite_amalgamation-subbuild\CMakeFiles\697a7a73c42c9c90c782040cdf9afd76\sqlite_amalgamation-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\mintdim__lab\apps\electron\native\build\_deps\sqlite_amalgamation-subbuild\CMakeFiles\a4c094a0b0f69ccbb90a3a227fedd457\sqlite_amalgamation-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\mintdim__lab\apps\electron\native\build\_deps\sqlite_amalgamation-subbuild\CMakeFiles\f90c5aad43685a27bb59edb01d91c0af\sqlite_amalgamation-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\mintdim__lab\apps\electron\native\build\_deps\sqlite_amalgamation-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\mintdim__lab\apps\electron\native\build\_deps\sqlite_amalgamation-subbuild\CMakeFiles\sqlite_amalgamation-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{6B350B02-69F2-38DD-8BCE-B69DBB6A62C6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

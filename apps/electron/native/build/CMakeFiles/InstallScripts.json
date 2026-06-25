@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"D:/mintdim__lab/apps/electron/native/build/cmake_install.cmake",
+		"D:/mintdim__lab/apps/electron/native/build/_deps/nlohmann_json-build/cmake_install.cmake",
+		"D:/mintdim__lab/apps/electron/native/build/chat_core/cmake_install.cmake",
+		"D:/mintdim__lab/apps/electron/native/build/sidecar/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

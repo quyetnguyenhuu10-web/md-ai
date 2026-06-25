@@ -1,0 +1,31 @@
+checkpoint:
+  path: runs/step_00000600
+
+vocab:
+  path: data_store/tokenizers/addition_3term_byte_bpe_512/tokenizer.json
+
+data:
+  eval_path: data_store/raw/addition_3term/eval.jsonl
+
+template:
+  sequence:
+    - "{prompt}\n{answer}<eos>"
+  input_until:
+    field: answer
+  target:
+    field: answer
+
+runtime:
+  batch_size: 64
+  max_new_tokens: 19
+  fixed_seq_len: null
+  limit: 0
+  stop_at_target_length: true
+
+scoring:
+  ignore_whitespace: false
+  normalize_line_endings: false
+  case_insensitive: false
+
+output:
+  wrong_limit: 20

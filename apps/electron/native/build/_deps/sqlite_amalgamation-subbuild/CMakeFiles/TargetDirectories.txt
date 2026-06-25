@@ -1,0 +1,3 @@
+D:/mintdim__lab/apps/electron/native/build/_deps/sqlite_amalgamation-subbuild/CMakeFiles/sqlite_amalgamation-populate.dir
+D:/mintdim__lab/apps/electron/native/build/_deps/sqlite_amalgamation-subbuild/CMakeFiles/ALL_BUILD.dir
+D:/mintdim__lab/apps/electron/native/build/_deps/sqlite_amalgamation-subbuild/CMakeFiles/ZERO_CHECK.dir

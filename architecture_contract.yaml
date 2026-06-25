@@ -1,0 +1,150 @@
+source_roots:
+  - src
+  - apps/electron/src
+  - apps/terminal
+
+ignored_dirs:
+  - .git
+  - .venv
+  - venv
+  - __pycache__
+  - .pytest_cache
+  - .ruff_cache
+  - node_modules
+  - dist
+  - build
+  - out
+  - coverage
+  - native/build
+  - data
+  - data_store
+  - runs
+
+layers:
+  python_core:
+    patterns:
+      - "src/mintdim_lab/**"
+    allowed_imports:
+      - stdlib
+      - external
+      - python_core
+    forbidden_imports:
+      - "apps.*"
+
+  electron_main:
+    patterns:
+      - "apps/electron/src/main/**"
+    allowed_imports:
+      - stdlib
+      - external
+      - electron_main
+      - electron_shared
+    forbidden_imports:
+      - electron_renderer
+      - electron_preload
+
+  electron_preload:
+    patterns:
+      - "apps/electron/src/preload/**"
+    allowed_imports:
+      - stdlib
+      - external
+      - electron_preload
+      - electron_shared
+    forbidden_imports:
+      - electron_main
+      - electron_renderer
+
+  electron_renderer:
+    patterns:
+      - "apps/electron/src/renderer/**"
+    allowed_imports:
+      - stdlib
+      - external
+      - electron_renderer
+      - electron_shared
+    forbidden_imports:
+      - electron_main
+      - electron_preload
+      - node:*
+      - electron
+
+  electron_shared:
+    patterns:
+      - "apps/electron/src/shared/**"
+    allowed_imports:
+      - stdlib
+      - external
+      - electron_shared
+    forbidden_imports:
+      - electron_main
+      - electron_preload
+      - electron_renderer
+      - electron
+
+  terminal_ui:
+    patterns:
+      - "apps/terminal/**"
+    allowed_imports:
+      - stdlib
+      - external
+      - terminal_ui
+    forbidden_imports:
+      - electron_main
+      - electron_preload
+      - electron_renderer
+
+allowed_imports: []
+forbidden_imports: []
+
+composition_roots:
+  - "src/**/main.py"
+  - "src/**/bootstrap.py"
+  - "src/**/composition.py"
+  - "src/mintdim_lab/cli/**"
+  - "src/mintdim_lab/serving/**"
+  - "src/mintdim_lab/system/**"
+  - "apps/electron/src/main/**"
+  - "apps/electron/src/preload/**"
+  - "apps/terminal/chat.tsx"
+  - "apps/terminal/lib/worker.ts"
+  - "apps/terminal/lib/checkpoints.ts"
+
+runtime_wiring_imports:
+  - sqlite3
+  - requests
+  - httpx
+  - openai
+  - subprocess
+  - socket
+  - pathlib.Path.open
+  - builtins.open
+  - fs
+  - node:fs
+  - node:child_process
+  - electron
+
+forbidden_source_strings:
+  - scope:
+      - "src/hello.md"
+    strings:
+      - "mintdim_lab"
+
+public_api_contracts: []
+
+side_effect_import_modules:
+  - mintdim_lab
+
+baseline:
+  file: architecture_contract_baseline.yaml
+  mode: allow_known
+
+rules:
+  forbid_import_cycles: true
+  forbid_private_cross_imports: true
+  forbid_relative_parent_imports: true
+  forbid_top_level_io: true
+  forbid_runtime_wiring_outside_composition_root: true
+  require_layer_markers: false
+  strict_public_api: false
+  allow_private_imports_for_tests: true

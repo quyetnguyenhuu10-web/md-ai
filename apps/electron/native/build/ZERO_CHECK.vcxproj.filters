@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\mintdim__lab\apps\electron\native\build\CMakeFiles\076a582d12123431e059b23e61bb5065\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{766BEE1A-91D9-3B38-B9EE-AF7FD45F56B0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

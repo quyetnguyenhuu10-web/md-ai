@@ -1,0 +1,27 @@
+# Public MintDim unit-build config for the linear-equation corpus.
+
+source:
+  jsonl:
+    files:
+      - ./data_store/raw/linear_equation/pretrain_sft.jsonl
+    fields:
+      - [prompt, target]
+    templates:
+      - "{prompt}\n{target}<eos>"
+
+tokenizer:
+  hf_json:
+    files:
+      - ./data_store/tokenizers/byte_bpe_512/tokenizer.json
+
+units:
+  sizes:
+    - [96]
+  build_batch:
+    - 64
+
+output:
+  dir:
+    path: ./data_store/packed/linear_equation_unit96
+    samples_per_shard:
+      - 1500

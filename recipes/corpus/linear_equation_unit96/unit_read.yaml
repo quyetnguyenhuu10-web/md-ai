@@ -1,0 +1,25 @@
+# Public MintDim unit-read config for the packed linear-equation corpus.
+#
+# unit_read is tokenizer-free. The .bin records already contain token ids.
+
+queue:
+  - path: ./data_store/packed/linear_equation_unit96/unit_96
+    unit: 96
+    batch: 50
+    accum: 30
+
+layout:
+  sequence_template:
+    - prompt
+    - token_template
+    - target
+    - token_template
+
+target:
+  fields:
+    - target
+    - token_template
+  index:
+    - 2
+    - 3
+  ignore_id: -100
